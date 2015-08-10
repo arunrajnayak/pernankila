@@ -1,13 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,100italic,300italic,400italic,700italic);
-/*
-Template Name: Multi
-Version: 1.0
-Author: ShapeBootstrap
-Author URL: http://shapebootstrap.net
-*/
-/*************************
-*******Typography******
-**************************/
+
 body {
   padding-top: 100px;
   background: #fff;
@@ -15,6 +7,7 @@ body {
   font-weight: 400;
   color: #64686d;
   line-height: 26px;
+  font-size: 16px;
 }
 h1,
 h2,
@@ -63,27 +56,47 @@ hr {
   padding-bottom: 20px;
   margin: 0 0 20px;
 }
-.section-header .section-title:before {
+.section-header .section-title:before, .sub-section-title:before {
   content: "";
   position: absolute;
   width: 140px;
   bottom: 0;
   left: 50%;
+  bottom: 0;
   margin-left: -70px;
   height: 1px;
   background: #ebebeb;
 }
-.section-header .section-title:after {
+.section-header .section-title:after, .sub-section-title:after {
   content: "";
   position: absolute;
   width: 24px;
   height: 24px;
-  bottom: -11px;
   left: 50%;
+  bottom: -11px;
   margin-left: -12px;
   border: 5px solid #fff;
   border-radius: 20px;
   background: #45aed6;
+}
+.sub-section-title {
+  font-size: 28px;
+  color: #272727;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 0 20px;
+}
+.sub-section-title:before{
+  bottom: 5px;
+}
+.sub-section-title:after{
+  bottom: -5px;
+  width: 20px;
+  height: 20px;
+}
+.section-cite{
+  float: right;
 }
 .btn {
   border-width: 0;
@@ -534,7 +547,7 @@ ul.nostyle i {
 #testimonial .btns {
   margin-top: 10px;
 }
-#about {
+#about, #lifestyle {
   padding: 100px 0;
 }
 #work-process {
