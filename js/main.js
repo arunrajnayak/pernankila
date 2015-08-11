@@ -7,6 +7,7 @@ jQuery(function($) {'use strict';
 
 	$('.navbar-collapse ul li a').on('click', function() {  
 		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
+		$('.navbar-collapse.navbar-right.collapse').removeClass('in');
 		return false;
 	});
 
@@ -213,21 +214,25 @@ jQuery(function($) {'use strict';
 	});
 
 	//Google Map
-	var latitude = $('#google-map').data('latitude');
-	var longitude = $('#google-map').data('longitude');
-	function initialize_map() {
-		var myLatlng = new google.maps.LatLng(latitude,longitude);
-		var mapOptions = {
-			zoom: 14,
-			scrollwheel: false,
-			center: myLatlng
-		};
-		var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-		var marker = new google.maps.Marker({
-			position: myLatlng,
-			map: map
-		});
-	}
-	google.maps.event.addDomListener(window, 'load', initialize_map);
+	
+	/*To fix full width*/
+	var map=$('#map iframe');
+	var screenWidth=$(document).width();
+	map.attr({
+		'width' : screenWidth
+	});
 
+	/* To solve zoom when scroll issue*/
+	$(document).ready(function(){
+		$('#embedMap').addClass('scrolloff');            
+	    $('#overlay').on("mouseup",function(){       
+	        $('#embedMap').addClass('scrolloff'); 
+	    });
+	    $('#overlay').on("mousedown",function(){       
+	        $('#embedMap').removeClass('scrolloff');
+	    });
+	    $("#embedMap").mouseleave(function () {           
+	        $('#embedMap').addClass('scrolloff'); 
+	    });
+	})
 });

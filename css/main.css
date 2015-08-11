@@ -175,26 +175,33 @@ ul.nostyle i {
 .navbar.navbar-default .navbar-toggle {
   margin-top: 32px;
 }
-.navbar.navbar-default .navbar-brand {
+.navbar.navbar-default .navbar-brand{
   height: auto;
-  padding: 22px 15px 21px;
+  padding: 10px 15px;
+}
+.navbar.navbar-default .navbar-brand img{
+  max-height: 57px;
 }
 @media only screen and (min-width: 768px) {
   #main-menu.navbar-default {
     background: rgba(255, 255, 255, 0.9);
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    max-height: 80px;
   }
   #main-menu.navbar-default .navbar-nav > li > a {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   #main-menu.navbar-default .navbar-nav > li.active > a,
   #main-menu.navbar-default .navbar-nav > li.open > a,
   #main-menu.navbar-default .navbar-nav > li:hover > a {
     background: transparent;
-    padding-top: 37px;
+    padding-top: 27px;
     border-top: 3px solid #45aed6;
+  }
+  #main-menu.navbar-default .navbar-nav > li:hover > a{
+    border-top: 3px solid #16D8D0;
   }
   #main-menu.navbar-default .dropdown-menu {
     padding: 0 20px;
@@ -547,8 +554,8 @@ ul.nostyle i {
 #testimonial .btns {
   margin-top: 10px;
 }
-#about, #lifestyle {
-  padding: 100px 0;
+#about, #lifestyle, #map {
+  padding: 100px 0 0 0;
 }
 #work-process {
   padding: 100px 0 50px;
@@ -949,3 +956,17 @@ ul.nostyle i {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
+
+
+.overlay {
+   background:transparent; 
+   position:relative; 
+   width:100%;
+   height:450px; /* your iframe height */
+   top:450px;  /* your iframe height */
+   margin-top:-450px;  /* your iframe height */
+}
+
+.scrolloff {
+        pointer-events: none;
+    }
