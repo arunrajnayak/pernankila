@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,100italic,300italic,400italic,700italic);
 
 body {
-  padding-top: 100px;
+  padding-top: 80px;
   background: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -266,10 +266,12 @@ ul.nostyle i {
   margin-top: 40px;
 }
 #cta2 {
-  /*background: #242a33 url(../images/weather/weatherBG.jpg) no-repeat 50% 50%;*/
   background-size: cover;
   color: #fff;
-  padding-top: 70px;
+}
+#cta2 iframe{
+  border-bottom: 2px solid #444;
+  max-width: 1000px;
 }
 #cta2 .btn {
   margin-top: 10px;
@@ -496,7 +498,7 @@ ul.nostyle i {
 #testimonial .btns {
   margin-top: 10px;
 }
-#about, #lifestyle, #map {
+#about, #lifestyle, #map, #weather {
   padding: 100px 0 0 0;
 }
 #work-process {
