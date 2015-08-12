@@ -182,6 +182,64 @@ ul.nostyle i {
 .navbar.navbar-default .navbar-brand img{
   max-height: 57px;
 }
+@media only screen and (min-width: 768px) {
+  #main-menu.navbar-default {
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    max-height: 80px;
+  }
+  #main-menu.navbar-default .navbar-nav > li > a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #main-menu.navbar-default .navbar-nav > li.active > a,
+  #main-menu.navbar-default .navbar-nav > li.open > a,
+  #main-menu.navbar-default .navbar-nav > li:hover > a {
+    background: transparent;
+    padding-top: 27px;
+    border-top: 3px solid #45aed6;
+  }
+  #main-menu.navbar-default .navbar-nav > li:hover > a{
+    border-top: 3px solid #16D8D0;
+  }
+  #main-menu.navbar-default .dropdown-menu {
+    padding: 0 20px;
+    min-width: 220px;
+    background-color: rgba(26, 28, 40, 0.9);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background-clip: inherit;
+  }
+  #main-menu.navbar-default .dropdown-menu > li {
+    border-left: 3px solid transparent;
+    margin-left: -20px;
+    padding-left: 17px;
+    -webit-transition: border-color 400ms;
+    transition: border-color 400ms;
+  }
+  #main-menu.navbar-default .dropdown-menu > li > a {
+    border-top: 1px solid #404455;
+    padding: 15px 0;
+    color: #eeeeee;
+  }
+  #main-menu.navbar-default .dropdown-menu > li:first-child > a {
+    border-top: 0;
+  }
+  #main-menu.navbar-default .dropdown-menu > li.active,
+  #main-menu.navbar-default .dropdown-menu > li.open,
+  #main-menu.navbar-default .dropdown-menu > li:hover {
+    border-left-color: #45aed6;
+  }
+  #main-menu.navbar-default .dropdown-menu > li.active > a,
+  #main-menu.navbar-default .dropdown-menu > li.open > a,
+  #main-menu.navbar-default .dropdown-menu > li:hover > a {
+    color: #45aed6;
+    background-color: transparent;
+  }
+}
 #main-slider {
   overflow: hidden;
 }
@@ -266,7 +324,7 @@ ul.nostyle i {
   margin-top: 40px;
 }
 #cta2 {
-  /*background: #242a33 url(../images/weather/weatherBG.jpg) no-repeat 50% 50%;*/
+  background: #242a33 url(../images/cta2/cta2-bg.jpg) no-repeat 50% 50%;
   background-size: cover;
   color: #fff;
   padding-top: 70px;
@@ -889,6 +947,11 @@ ul.nostyle i {
   display: inline-block;
   margin: 0 7.5px;
 }
+@media only screen and (min-width: 768px) {
+  #footer .social-icons {
+    float: right;
+  }
+}
 .form-control {
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -899,189 +962,11 @@ ul.nostyle i {
    background:transparent; 
    position:relative; 
    width:100%;
-   height:450px; 
-   top:450px;  
-   margin-top:-450px;  
+   height:450px; /* your iframe height */
+   top:450px;  /* your iframe height */
+   margin-top:-450px;  /* your iframe height */
 }
+
 .scrolloff {
-    pointer-events: none;
-  }
- .fe_container {
-      width: 100%;
-      font-weight: 300;
-      min-width: 500px;
-      max-width: 1000px;
-      color: #333;
-      margin: 0 auto;
-      height: 245px;
+        pointer-events: none;
     }
-    body.hide_daily .fe_container { min-width: 200px;}
-    
-    .fe_container a { color: #333; }
-    
-    .fe_container .fe_title {
-      position: relative;
-      height: 32px;
-      border-bottom: 2px solid #444;
-    }
-    
-    .fe_container .fe_title .fe_location {
-      position: absolute;
-      left: 10px;
-      bottom: 6px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    body.hide_daily .fe_container .fe_title .fe_location { font-size: 14px; bottom: 8px; }
-    body.hide_daily .fe_container .fe_title .pre { display: none; }
-    
-    .fe_container .fe_title .fe_forecast_link {
-      position: absolute;
-      right: 10px;
-      bottom: 8px;
-      font-size: 14px;
-    }
-    
-    .fe_container .fe_forecast {
-      margin-top: 14px;
-    }
-    
-    .fe_container .fe_currently {
-      float: left;
-      position: relative;
-      width: 35%;
-      height: 100%;
-      font-size: 14px;
-      text-align: center;
-      padding-top: 5px;
-    }
-    body.hide_daily .fe_container .fe_currently { width: 100%; }
-    
-    .fe_container #fe_current_icon {
-      display: inline-block;
-      width: 80px;
-      height: 80px;
-    }
-    
-    .fe_container .fe_currently .fe_temp {
-      display: inline-block;
-      position: relative;
-      top: -15px;
-      margin-left: 5px;
-      font-size: 50px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 0.65em;
-    }
-    
-    .fe_container .fe_currently .fe_temp .fe_dir {
-      display: block;
-      position: relative;
-      left: -5px;
-      display: block;
-      font-size: 14px;
-      font-weight: normal;
-    }
-    
-    .fe_container .fe_currently .fe_summary {
-      font-size: 18px;
-      font-weight: bold;
-    }
-    
-    .fe_container .fe_currently .fe_wind {
-      font-size: 14px;
-    }
-    
-    .fe_container .fe_daily {
-      float: left;
-      display: table;
-      width: 65%;
-      height: 100%;
-      font-size: 14px;
-      text-align: center;
-    }
-    body.hide_daily .fe_container .fe_daily { display: none; }
-    
-    .fe_container .fe_daily .fe_day {
-      display: table-cell;
-      text-align: center;
-    }
-    
-    .fe_container .fe_daily .fe_day .fe_label {
-      font-weight: bold;
-      display: inline-block;
-      width: 100%;
-    }
-    
-    .fe_container .fe_daily .fe_icon {
-      display: inline-block;
-      width: 26px;
-      height: 26px;
-      margin-top: 2px;
-    }
-    
-    .fe_container .fe_daily .fe_day .fe_temp_bar {
-      position: relative;
-      width: 20px;
-      margin: 18px auto 0;
-      font-size: 12px;
-      border-radius: 200px;
-    }
-    
-    .fe_container .fe_daily .fe_day .fe_high_temp {
-      position: absolute;
-      width: 100%;
-      top: -16px;
-      left: 2px;
-    }
-    
-    .fe_container .fe_daily .fe_day .fe_low_temp {
-      position: absolute;
-      width: 100%;
-      bottom: -16px;
-      left: 2px;
-    }
-    
-    .fe_alert {
-      position: absolute;
-      top: 205px;
-      text-align: center;
-      width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    
-    .fe_alert a {
-      text-decoration: underline;
-      text-overflow: ellipsis;
-      font-style: italic;
-      font-weight: bold;
-      text-decoration: underline;
-      color: #A00;
-    }
-    
-    .fe_alert a .fe_icon {
-      font-size: 20px;
-    }
-    
-    .fe_loading {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      line-height: 240px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    
-    #fe_loading_icon {
-      position: relative;
-      top: 15px;
-      left: -5px;
-    }
-    .fe_title {
-    display: none !important;
-}
