@@ -237,7 +237,7 @@ jQuery(function($) {'use strict';
 	    $('#overlay')
 	    	.on("mouseup",scrollOff)
 	    	.on("mouseleave",scrollOff)
-	    	.on("mousedown",scrollOn);
-	});
-	
+	    	.on("mousedown",scrollOn)
+	    	.on("touchstart",scrollOn)
+		});
 });

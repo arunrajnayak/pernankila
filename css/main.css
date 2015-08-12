@@ -893,6 +893,8 @@ ul.nostyle i {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
+
+
 .overlay {
    background:transparent; 
    position:relative; 
@@ -901,3 +903,6 @@ ul.nostyle i {
    top:450px;  
    margin-top:-450px;  
 }
+.scrolloff {
+    pointer-events: none;
+  }
