@@ -228,29 +228,16 @@ jQuery(function($) {'use strict';
 		var scrollOff=function(){
 			$('#embedMap').addClass('scrolloff');
 		}
-
 		var scrollOn=function(){
 			$('#embedMap').removeClass('scrolloff');
-		}
+		} 
 
-
-		// $('#embedMap').addClass('scrolloff');  
 		scrollOff();     
 
 	    $('#overlay')
 	    	.on("mouseup",scrollOff)
 	    	.on("mouseleave",scrollOff)
-	    	.on("touchend",scrollOff)
-	    	.on("touchleave",scrollOff)
-	    	.on("mousedown",scrollOn)
-	    	.on("touchstart",scrollOn);
-
-	    // $('#overlay').on("mousedown",function(){       
-	    //     $('#embedMap').removeClass('scrolloff');
-	    // });
-	    // $("#embedMap").on("mouseleave",function () {           
-	    //     $('#embedMap').addClass('scrolloff'); 
-	    // });
+	    	.on("mousedown",scrollOn);
 	});
 	
 });
