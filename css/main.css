@@ -1,13 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,100italic,300italic,400italic,700italic);
-/*
-Template Name: Multi
-Version: 1.0
-Author: ShapeBootstrap
-Author URL: http://shapebootstrap.net
-*/
-/*************************
-*******Typography******
-**************************/
+
 body {
   padding-top: 100px;
   background: #fff;
@@ -15,6 +7,7 @@ body {
   font-weight: 400;
   color: #64686d;
   line-height: 26px;
+  font-size: 16px;
 }
 h1,
 h2,
@@ -63,27 +56,47 @@ hr {
   padding-bottom: 20px;
   margin: 0 0 20px;
 }
-.section-header .section-title:before {
+.section-header .section-title:before, .sub-section-title:before {
   content: "";
   position: absolute;
   width: 140px;
   bottom: 0;
   left: 50%;
+  bottom: 0;
   margin-left: -70px;
   height: 1px;
   background: #ebebeb;
 }
-.section-header .section-title:after {
+.section-header .section-title:after, .sub-section-title:after {
   content: "";
   position: absolute;
   width: 24px;
   height: 24px;
-  bottom: -11px;
   left: 50%;
+  bottom: -11px;
   margin-left: -12px;
   border: 5px solid #fff;
   border-radius: 20px;
   background: #45aed6;
+}
+.sub-section-title {
+  font-size: 28px;
+  color: #272727;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 0 20px;
+}
+.sub-section-title:before{
+  bottom: 5px;
+}
+.sub-section-title:after{
+  bottom: -5px;
+  width: 20px;
+  height: 20px;
+}
+.section-cite{
+  float: right;
 }
 .btn {
   border-width: 0;
@@ -162,63 +175,12 @@ ul.nostyle i {
 .navbar.navbar-default .navbar-toggle {
   margin-top: 32px;
 }
-.navbar.navbar-default .navbar-brand {
+.navbar.navbar-default .navbar-brand{
   height: auto;
-  padding: 22px 15px 21px;
+  padding: 10px 15px;
 }
-@media only screen and (min-width: 768px) {
-  #main-menu.navbar-default {
-    background: rgba(255, 255, 255, 0.9);
-    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
-  }
-  #main-menu.navbar-default .navbar-nav > li > a {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  #main-menu.navbar-default .navbar-nav > li.active > a,
-  #main-menu.navbar-default .navbar-nav > li.open > a,
-  #main-menu.navbar-default .navbar-nav > li:hover > a {
-    background: transparent;
-    padding-top: 37px;
-    border-top: 3px solid #45aed6;
-  }
-  #main-menu.navbar-default .dropdown-menu {
-    padding: 0 20px;
-    min-width: 220px;
-    background-color: rgba(26, 28, 40, 0.9);
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    background-clip: inherit;
-  }
-  #main-menu.navbar-default .dropdown-menu > li {
-    border-left: 3px solid transparent;
-    margin-left: -20px;
-    padding-left: 17px;
-    -webit-transition: border-color 400ms;
-    transition: border-color 400ms;
-  }
-  #main-menu.navbar-default .dropdown-menu > li > a {
-    border-top: 1px solid #404455;
-    padding: 15px 0;
-    color: #eeeeee;
-  }
-  #main-menu.navbar-default .dropdown-menu > li:first-child > a {
-    border-top: 0;
-  }
-  #main-menu.navbar-default .dropdown-menu > li.active,
-  #main-menu.navbar-default .dropdown-menu > li.open,
-  #main-menu.navbar-default .dropdown-menu > li:hover {
-    border-left-color: #45aed6;
-  }
-  #main-menu.navbar-default .dropdown-menu > li.active > a,
-  #main-menu.navbar-default .dropdown-menu > li.open > a,
-  #main-menu.navbar-default .dropdown-menu > li:hover > a {
-    color: #45aed6;
-    background-color: transparent;
-  }
+.navbar.navbar-default .navbar-brand img{
+  max-height: 57px;
 }
 #main-slider {
   overflow: hidden;
@@ -304,7 +266,7 @@ ul.nostyle i {
   margin-top: 40px;
 }
 #cta2 {
-  background: #242a33 url(../images/cta2/cta2-bg.jpg) no-repeat 50% 50%;
+  /*background: #242a33 url(../images/weather/weatherBG.jpg) no-repeat 50% 50%;*/
   background-size: cover;
   color: #fff;
   padding-top: 70px;
@@ -534,8 +496,8 @@ ul.nostyle i {
 #testimonial .btns {
   margin-top: 10px;
 }
-#about {
-  padding: 100px 0;
+#about, #lifestyle, #map {
+  padding: 100px 0 0 0;
 }
 #work-process {
   padding: 100px 0 50px;
@@ -927,12 +889,15 @@ ul.nostyle i {
   display: inline-block;
   margin: 0 7.5px;
 }
-@media only screen and (min-width: 768px) {
-  #footer .social-icons {
-    float: right;
-  }
-}
 .form-control {
   box-shadow: none;
   -webkit-box-shadow: none;
+}
+.overlay {
+   background:transparent; 
+   position:relative; 
+   width:100%;
+   height:450px; 
+   top:450px;  
+   margin-top:-450px;  
 }
