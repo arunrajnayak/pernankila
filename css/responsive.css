@@ -58,4 +58,7 @@
   #footer .social-icons {
     float: right;
   }
+  #main-slider .item {
+    height: 558px;
+  }
 }

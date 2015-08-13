@@ -186,9 +186,9 @@ ul.nostyle i {
   overflow: hidden;
 }
 #main-slider .item {
-  height: 558px;
+  height: 200px;
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% 50%;
   background-size: cover;
 }
 #main-slider .slider-inner {
