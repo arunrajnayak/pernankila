@@ -47,8 +47,7 @@ jQuery(function($) {'use strict';
 
 	//Slider
 	$(document).ready(function() {
-		var time = 7; // time in seconds
-
+		var time = 7; 
 	 	var $progressBar,
 	      $bar, 
 	      $elem, 
@@ -56,11 +55,11 @@ jQuery(function($) {'use strict';
 	      tick,
 	      percentTime;
 	 
-	    //Init the carousel
 	    $("#main-slider").find('.owl-carousel').owlCarousel({
 	      slideSpeed : 500,
 	      paginationSpeed : 500,
 	      singleItem : true,
+	      pagination : false,
 	      navigation : true,
 			navigationText: [
 			"<i class='fa fa-angle-left'></i>",
@@ -69,20 +68,16 @@ jQuery(function($) {'use strict';
 	      afterInit : progressBar,
 	      afterMove : moved,
 	      startDragging : pauseOnDragging,
-	      //autoHeight : true,
 	      transitionStyle : "fadeUp"
 	    });
 	 
-	    //Init progressBar where elem is $("#owl-demo")
 	    function progressBar(elem){
 	      $elem = elem;
-	      //build progress bar elements
 	      buildProgressBar();
-	      //start counting
 	      start();
 	    }
 	 
-	    //create div#progressBar and div#bar then append to $(".owl-carousel")
+	    //progressBar
 	    function buildProgressBar(){
 	      $progressBar = $("<div>",{
 	        id:"progressBar"
@@ -94,10 +89,8 @@ jQuery(function($) {'use strict';
 	    }
 	 
 	    function start() {
-	      //reset timer
 	      percentTime = 0;
 	      isPause = false;
-	      //run interval every 0.01 second
 	      tick = setInterval(interval, 10);
 	    };
 	 
@@ -107,34 +100,24 @@ jQuery(function($) {'use strict';
 	        $bar.css({
 	           width: percentTime+"%"
 	         });
-	        //if percentTime is equal or greater than 100
 	        if(percentTime >= 100){
-	          //slide to next item 
 	          $elem.trigger('owl.next')
 	        }
 	      }
 	    }
-	 
-	    //pause while dragging 
+
 	    function pauseOnDragging(){
 	      isPause = true;
 	    }
-	 
-	    //moved callback
 	    function moved(){
-	      //clear interval
 	      clearTimeout(tick);
-	      //start again
 	      start();
 	    }
 	});
 
-	//Initiat WOW JS
+	//WOW JS
 	new WOW().init();
-	//smoothScroll
 	smoothScroll.init();
-
-	// portfolio filter
 	$(window).load(function(){'use strict';
 		var $portfolio_selectors = $('.portfolio-filter >li>a');
 		var $portfolio = $('.portfolio-items');
@@ -151,6 +134,7 @@ jQuery(function($) {'use strict';
 			return false;
 		});
 	});
+
 
 	$(document).ready(function() {
 		//Animated Progress
@@ -240,4 +224,21 @@ jQuery(function($) {'use strict';
 	    	.on("mousedown",scrollOn)
 	    	.on("touchstart",scrollOn)
 		});
+
+
+	/*Gallery*/
+	$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+ 
+      items : 3,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3],
+      transitionStyle: 'backSlide',
+      lazyLoad : true
+  });
+ 
+});
 });

@@ -265,23 +265,23 @@ ul.nostyle i {
 #cta .btn {
   margin-top: 40px;
 }
-#cta2 {
+#weather-forecast {
   background-size: cover;
   color: #fff;
 }
-#cta2 iframe{
+#weather-forecast iframe{
   border-bottom: 2px solid #444;
   max-width: 1000px;
 }
-#cta2 .btn {
+#weather-forecast .btn {
   margin-top: 10px;
 }
-#cta2 h2 {
+#weather-forecast h2 {
   color: #fff;
   font-size: 44px;
   line-height: 1;
 }
-#cta2 h2 > span {
+#weather-forecast h2 > span {
   color: #45aed6;
 }
 #features {
@@ -498,7 +498,7 @@ ul.nostyle i {
 #testimonial .btns {
   margin-top: 10px;
 }
-#about, #lifestyle, #map, #weather {
+#about, #lifestyle, #map, #weather, #gallery {
   padding: 100px 0 0 0;
 }
 #work-process {
@@ -896,7 +896,6 @@ ul.nostyle i {
   -webkit-box-shadow: none;
 }
 
-
 .overlay {
    background:transparent; 
    position:relative; 
@@ -906,5 +905,18 @@ ul.nostyle i {
    margin-top:-450px;  
 }
 .scrolloff {
-    pointer-events: none;
-  }
+  pointer-events: none;
+}
+
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#main-slider .owl-theme .owl-controls{
+  margin-top: 0;
+}
+
