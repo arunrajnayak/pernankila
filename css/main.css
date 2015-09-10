@@ -919,4 +919,22 @@ ul.nostyle i {
 #main-slider .owl-theme .owl-controls{
   margin-top: 0;
 }
+#owl-demo .item .gallery-desc{
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #000000;
+  opacity: 0;
+  margin-top: -13%;
+  position: relative;
+}
+#owl-demo .desc-copy{
+  position: absolute;
+  top: 20%;
+  color: white;
+  margin: auto;
+  left: 0; bottom: 0; right: 0;
+}
+
+
 

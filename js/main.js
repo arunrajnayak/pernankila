@@ -226,19 +226,22 @@ jQuery(function($) {'use strict';
 		});
 
 
-	/*Gallery*/
-	$(document).ready(function() {
- 
-  $("#owl-demo").owlCarousel({
- 
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
- 
-      items : 3,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3],
-      transitionStyle: 'backSlide',
-      lazyLoad : true
-  });
- 
-});
+		/*Gallery*/
+		$(document).ready(function() {
+		  $("#owl-demo").owlCarousel({
+		      autoPlay: 3000, 
+		      items : 3,
+		      itemsDesktop : [1199,3],
+		      itemsDesktopSmall : [979,3],
+		      transitionStyle: 'backSlide',
+		      lazyLoad : true
+		  });
+
+		  $('#owl-demo .item').hover(function() {
+		  	   $(this).find('.gallery-desc').stop(true,true).animate({opacity: 0.5},300);
+		  }, function() {
+		  	   $(this).find('.gallery-desc').stop(true,true).animate({opacity: 0},150);
+		  });
+	 
+	});
 });
