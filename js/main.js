@@ -233,7 +233,8 @@ jQuery(function($) {'use strict';
 		      items : 3,
 		      itemsDesktop : [1199,3],
 		      itemsDesktopSmall : [979,3],
-		      transitionStyle: 'backSlide',
+		      transitionStyle: 'fadeUp',
+		      responsive: true,
 		      lazyLoad : true
 		  });
 
