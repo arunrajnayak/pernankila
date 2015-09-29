@@ -1265,3 +1265,15 @@ ul.nostyle i {
   bottom: 0;
   right: 0;
 }
+
+@media screen and (max-device-width: 480px) {
+  /* line 940, ../../src/sass/components/_home.scss */
+  .owl-pagination {
+    display: none;
+  }
+
+  /* line 943, ../../src/sass/components/_home.scss */
+  #owl-demo .item .gallery-desc {
+    margin-top: -15%;
+  }
+}
