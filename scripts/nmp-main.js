@@ -45,75 +45,75 @@ jQuery(function($) {'use strict';
         $(this).closest('.panel-heading').toggleClass('active');
     });
 
-    //Slider
-    $(document).ready(function() {
-        var time = 7; 
-        var $progressBar,
-          $bar, 
-          $elem, 
-          isPause, 
-          tick,
-          percentTime;
+    // //Slider
+    // $(document).ready(function() {
+    //     var time = 7; 
+    //     var $progressBar,
+    //       $bar, 
+    //       $elem, 
+    //       isPause, 
+    //       tick,
+    //       percentTime;
      
-        $("#main-slider").find('.owl-carousel').owlCarousel({
-          slideSpeed : 500,
-          paginationSpeed : 500,
-          singleItem : true,
-          pagination : false,
-          navigation : true,
-            navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-            ],
-          afterInit : progressBar,
-          afterMove : moved,
-          startDragging : pauseOnDragging,
-          transitionStyle : "fadeUp"
-        });
+    //     $("#main-slider").find('.owl-carousel').owlCarousel({
+    //       slideSpeed : 500,
+    //       paginationSpeed : 500,
+    //       singleItem : true,
+    //       pagination : false,
+    //       navigation : true,
+    //         navigationText: [
+    //         "<i class='fa fa-angle-left'></i>",
+    //         "<i class='fa fa-angle-right'></i>"
+    //         ],
+    //       afterInit : progressBar,
+    //       afterMove : moved,
+    //       startDragging : pauseOnDragging,
+    //       transitionStyle : "fadeUp"
+    //     });
      
-        function progressBar(elem){
-          $elem = elem;
-          buildProgressBar();
-          start();
-        }
+    //     function progressBar(elem){
+    //       $elem = elem;
+    //       buildProgressBar();
+    //       start();
+    //     }
      
-        //progressBar
-        function buildProgressBar(){
-          $progressBar = $("<div>",{
-            id:"progressBar"
-          });
-          $bar = $("<div>",{
-            id:"bar"
-          });
-          $progressBar.append($bar).appendTo($elem);
-        }
+    //     //progressBar
+    //     function buildProgressBar(){
+    //       $progressBar = $("<div>",{
+    //         id:"progressBar"
+    //       });
+    //       $bar = $("<div>",{
+    //         id:"bar"
+    //       });
+    //       $progressBar.append($bar).appendTo($elem);
+    //     }
      
-        function start() {
-          percentTime = 0;
-          isPause = false;
-          tick = setInterval(interval, 10);
-        };
+    //     function start() {
+    //       percentTime = 0;
+    //       isPause = false;
+    //       tick = setInterval(interval, 10);
+    //     };
      
-        function interval() {
-          if(isPause === false){
-            percentTime += 1 / time;
-            $bar.css({
-               width: percentTime+"%"
-             });
-            if(percentTime >= 100){
-              $elem.trigger('owl.next')
-            }
-          }
-        }
+    //     function interval() {
+    //       if(isPause === false){
+    //         percentTime += 1 / time;
+    //         $bar.css({
+    //            width: percentTime+"%"
+    //          });
+    //         if(percentTime >= 100){
+    //           $elem.trigger('owl.next')
+    //         }
+    //       }
+    //     }
 
-        function pauseOnDragging(){
-          isPause = true;
-        }
-        function moved(){
-          clearTimeout(tick);
-          start();
-        }
-    });
+    //     function pauseOnDragging(){
+    //       isPause = true;
+    //     }
+    //     function moved(){
+    //       clearTimeout(tick);
+    //       start();
+    //     }
+    // });
 
     //WOW JS
     new WOW().init();
@@ -192,10 +192,10 @@ jQuery(function($) {'use strict';
         });
     });
 
-    //Pretty Photo
-    $("a[rel^='prettyPhoto']").prettyPhoto({
-        social_tools: false
-    });
+    // //Pretty Photo
+    // $("a[rel^='prettyPhoto']").prettyPhoto({
+    //     social_tools: false
+    // });
 
     //Google Map
     
@@ -229,7 +229,6 @@ jQuery(function($) {'use strict';
         /*Gallery*/
         $(document).ready(function() {
           $("#owl-demo").owlCarousel({
-              autoPlay: 3000, 
               items : 3,
               itemsDesktop : [1199,3],
               itemsDesktopSmall : [979,3],
@@ -244,5 +243,11 @@ jQuery(function($) {'use strict';
                $(this).find('.gallery-desc').stop(true,true).animate({opacity: 0.5},150);
           });
      
-    });
+      });
+
+        // /*parallax*/
+        // var vuHeight=$(window).height();
+        // $('#parallax_hero').css({
+        //   minHeight: vuHeight-80
+        // });
 });
