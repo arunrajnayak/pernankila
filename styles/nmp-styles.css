@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,100italic,300italic,400italic,700italic);
 /* line 3, ../../src/sass/components/_home.scss */
 body {
@@ -1232,35 +1233,30 @@ ul.nostyle i {
 }
 
 /* line 913, ../../src/sass/components/_home.scss */
-#owl-demo .item {
+.gallery-carousel .item {
   margin: 3px;
 }
 
 /* line 916, ../../src/sass/components/_home.scss */
-#owl-demo .item img {
+.gallery-carousel .item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 921, ../../src/sass/components/_home.scss */
-#main-slider .owl-theme .owl-controls {
-  margin-top: 0;
-}
-
-/* line 924, ../../src/sass/components/_home.scss */
-#owl-demo .item .gallery-desc {
+/* line 922, ../../src/sass/components/_home.scss */
+.gallery-carousel .item .gallery-desc {
   height: 50px;
   text-align: center;
   font-size: 20px;
   background-color: #000000;
-  opacity: 0.5;
-  margin-top: -13%;
+  opacity: 0.4;
+  margin-top: -50px;
   position: relative;
 }
 
-/* line 933, ../../src/sass/components/_home.scss */
-#owl-demo .desc-copy {
+/* line 931, ../../src/sass/components/_home.scss */
+.gallery-carousel .desc-copy {
   position: absolute;
   top: 20%;
   color: white;
@@ -1271,17 +1267,12 @@ ul.nostyle i {
 }
 
 @media screen and (max-device-width: 480px) {
-  /* line 942, ../../src/sass/components/_home.scss */
-  .owl-pagination {
-    display: none;
-  }
-
-  /* line 945, ../../src/sass/components/_home.scss */
-  #owl-demo .item .gallery-desc {
+  /* line 940, ../../src/sass/components/_home.scss */
+  .gallery-carousel .item .gallery-desc {
     margin-top: -50px;
   }
 }
-/* line 950, ../../src/sass/components/_home.scss */
+/* line 945, ../../src/sass/components/_home.scss */
 .parallax {
   min-height: 350px;
   background-size: cover;
@@ -1290,19 +1281,283 @@ ul.nostyle i {
   background-attachment: fixed;
 }
 
-/* line 958, ../../src/sass/components/_home.scss */
+/* line 953, ../../src/sass/components/_home.scss */
 #parallax_hero {
   min-height: 638px;
   background-image: url("../media/slider/image1.jpg");
   background-position: center -100px;
 }
 
-/* line 964, ../../src/sass/components/_home.scss */
+/* line 959, ../../src/sass/components/_home.scss */
 #parallax_one {
   background-image: url("../media/slider/image2.jpg");
 }
 
-/* line 968, ../../src/sass/components/_home.scss */
+/* line 963, ../../src/sass/components/_home.scss */
 #parallax_two {
   background-image: url("../media/slider/image3.jpg");
+}
+
+/* line 967, ../../src/sass/components/_home.scss */
+.slick-prev, .slick-next {
+  height: 60px !important;
+  width: auto !important;
+  z-index: 9999;
+}
+
+/* Slider */
+/* line 3, ../../src/sass/components/_slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 17, ../../src/sass/components/_slick.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 24, ../../src/sass/components/_slick.scss */
+.slick-list:focus {
+  outline: none;
+}
+/* line 28, ../../src/sass/components/_slick.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 33, ../../src/sass/components/_slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 42, ../../src/sass/components/_slick.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+/* line 48, ../../src/sass/components/_slick.scss */
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+/* line 54, ../../src/sass/components/_slick.scss */
+.slick-track:after {
+  clear: both;
+}
+/* line 58, ../../src/sass/components/_slick.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 62, ../../src/sass/components/_slick.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+/* line 66, ../../src/sass/components/_slick.scss */
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+/* line 69, ../../src/sass/components/_slick.scss */
+.slick-slide img {
+  display: block;
+}
+/* line 72, ../../src/sass/components/_slick.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+/* line 78, ../../src/sass/components/_slick.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+/* line 82, ../../src/sass/components/_slick.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+/* line 86, ../../src/sass/components/_slick.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+/* line 90, ../../src/sass/components/_slick.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 96, ../../src/sass/components/_slick.scss */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+/* line 45, ../../src/sass/components/_slick-theme.scss */
+.slick-loading .slick-list {
+  background: #fff url('/images/ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url('/fonts/slick.eot');
+  src: url('/fonts/slick.eot?#iefix') format("embedded-opentype"), url('/fonts/slick.woff') format("woff"), url('/fonts/slick.ttf') format("truetype"), url('/fonts/slick.svg#slick') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Arrows */
+/* line 63, ../../src/sass/components/_slick-theme.scss */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+/* line 81, ../../src/sass/components/_slick-theme.scss */
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+/* line 85, ../../src/sass/components/_slick-theme.scss */
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+/* line 89, ../../src/sass/components/_slick-theme.scss */
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+/* line 92, ../../src/sass/components/_slick-theme.scss */
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 103, ../../src/sass/components/_slick-theme.scss */
+.slick-prev {
+  left: -6px;
+}
+
+/* line 107, ../../src/sass/components/_slick-theme.scss */
+.slick-next {
+  right: -6px;
+}
+
+/* Dots */
+/* line 112, ../../src/sass/components/_slick-theme.scss */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+/* line 116, ../../src/sass/components/_slick-theme.scss */
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* line 125, ../../src/sass/components/_slick-theme.scss */
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+/* line 133, ../../src/sass/components/_slick-theme.scss */
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+/* line 145, ../../src/sass/components/_slick-theme.scss */
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+/* line 147, ../../src/sass/components/_slick-theme.scss */
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+/* line 151, ../../src/sass/components/_slick-theme.scss */
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 168, ../../src/sass/components/_slick-theme.scss */
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
 }

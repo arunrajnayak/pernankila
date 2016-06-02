@@ -139,19 +139,24 @@ jQuery(function($) {'use strict';
 
         /*Gallery*/
         $(document).ready(function() {
-          $("#owl-demo").owlCarousel({
-              items : 3,
-              itemsDesktop : [1199,3],
-              itemsDesktopSmall : [979,3],
-              transitionStyle: 'fadeUp',
-              responsive: true,
-              lazyLoad : true
+          $('.gallery-carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 2500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                focusOnSelect: true,
+                easing: 'ease-in-out',
+                lazyLoad: 'ondemand',
+                swipeToSlide: true,
+                nextArrow: '<img class="slick-next" src="media/next.png">',
+                prevArrow: '<img class="slick-prev" src="media/prev.png">'
           });
 
-          $('#owl-demo .item').hover(function() {
-               $(this).find('.gallery-desc').stop(true,true).animate({opacity: 1},300);
+          $('.gallery-carousel .item').hover(function() {
+               $(this).find('.gallery-desc').stop(true,true).animate({opacity: 0.9},300);
           }, function() {
-               $(this).find('.gallery-desc').stop(true,true).animate({opacity: 0.5},150);
+               $(this).find('.gallery-desc').stop(true,true).animate({opacity: 0.4},150);
           });
      
       });
