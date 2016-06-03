@@ -45,76 +45,6 @@ jQuery(function($) {'use strict';
         $(this).closest('.panel-heading').toggleClass('active');
     });
 
-    // //Slider
-    // $(document).ready(function() {
-    //     var time = 7; 
-    //     var $progressBar,
-    //       $bar, 
-    //       $elem, 
-    //       isPause, 
-    //       tick,
-    //       percentTime;
-     
-    //     $("#main-slider").find('.owl-carousel').owlCarousel({
-    //       slideSpeed : 500,
-    //       paginationSpeed : 500,
-    //       singleItem : true,
-    //       pagination : false,
-    //       navigation : true,
-    //         navigationText: [
-    //         "<i class='fa fa-angle-left'></i>",
-    //         "<i class='fa fa-angle-right'></i>"
-    //         ],
-    //       afterInit : progressBar,
-    //       afterMove : moved,
-    //       startDragging : pauseOnDragging,
-    //       transitionStyle : "fadeUp"
-    //     });
-     
-    //     function progressBar(elem){
-    //       $elem = elem;
-    //       buildProgressBar();
-    //       start();
-    //     }
-     
-    //     //progressBar
-    //     function buildProgressBar(){
-    //       $progressBar = $("<div>",{
-    //         id:"progressBar"
-    //       });
-    //       $bar = $("<div>",{
-    //         id:"bar"
-    //       });
-    //       $progressBar.append($bar).appendTo($elem);
-    //     }
-     
-    //     function start() {
-    //       percentTime = 0;
-    //       isPause = false;
-    //       tick = setInterval(interval, 10);
-    //     };
-     
-    //     function interval() {
-    //       if(isPause === false){
-    //         percentTime += 1 / time;
-    //         $bar.css({
-    //            width: percentTime+"%"
-    //          });
-    //         if(percentTime >= 100){
-    //           $elem.trigger('owl.next')
-    //         }
-    //       }
-    //     }
-
-    //     function pauseOnDragging(){
-    //       isPause = true;
-    //     }
-    //     function moved(){
-    //       clearTimeout(tick);
-    //       start();
-    //     }
-    // });
-
     //WOW JS
     new WOW().init();
     smoothScroll.init();
@@ -177,25 +107,6 @@ jQuery(function($) {'use strict';
         });
     });
 
-    // Contact form
-    var form = $('#main-contact-form');
-    form.submit(function(event){
-        event.preventDefault();
-        var form_status = $('<div class="form_status"></div>');
-        $.ajax({
-            url: $(this).attr('action'),
-            beforeSend: function(){
-                form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
-            }
-        }).done(function(data){
-            form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
-        });
-    });
-
-    // //Pretty Photo
-    // $("a[rel^='prettyPhoto']").prettyPhoto({
-    //     social_tools: false
-    // });
 
     //Google Map
     
@@ -228,26 +139,37 @@ jQuery(function($) {'use strict';
 
         /*Gallery*/
         $(document).ready(function() {
-          $("#owl-demo").owlCarousel({
-              items : 3,
-              itemsDesktop : [1199,3],
-              itemsDesktopSmall : [979,3],
-              transitionStyle: 'fadeUp',
-              responsive: true,
-              lazyLoad : true
+          $('.gallery-carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 2500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                focusOnSelect: true,
+                easing: 'ease-in-out',
+                lazyLoad: 'ondemand',
+                swipeToSlide: true,
+                nextArrow: '<img class="slick-next" src="media/next.png">',
+                prevArrow: '<img class="slick-prev" src="media/prev.png">',
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }, {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 1,
+                        centerMode:false
+                      }
+                    }]
           });
 
-          $('#owl-demo .item').hover(function() {
-               $(this).find('.gallery-desc').stop(true,true).animate({opacity: 1},300);
+          $('.gallery-carousel .item').hover(function() {
+               $(this).find('.gallery-desc').stop(true,true).animate({opacity: 0.9},300);
           }, function() {
-               $(this).find('.gallery-desc').stop(true,true).animate({opacity: 0.5},150);
+               $(this).find('.gallery-desc').stop(true,true).animate({opacity: 0.4},150);
           });
      
       });
-
-        // /*parallax*/
-        // var vuHeight=$(window).height();
-        // $('#parallax_hero').css({
-        //   minHeight: vuHeight-80
-        // });
 });
