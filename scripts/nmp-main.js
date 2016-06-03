@@ -150,7 +150,19 @@ jQuery(function($) {'use strict';
                 lazyLoad: 'ondemand',
                 swipeToSlide: true,
                 nextArrow: '<img class="slick-next" src="media/next.png">',
-                prevArrow: '<img class="slick-prev" src="media/prev.png">'
+                prevArrow: '<img class="slick-prev" src="media/prev.png">',
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }, {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 1,
+                        centerMode:false
+                      }
+                    }]
           });
 
           $('.gallery-carousel .item').hover(function() {
