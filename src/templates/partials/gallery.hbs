@@ -1,0 +1,34 @@
+<div id="parallax_two" class="parallax"></div>
+<section id="gallery">
+ <div class="demo">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">Photo Gallery</h2>
+            <div class="row">
+                <div class="col-md-12">
+                   {{!--  <div id="owl-demo"  class="owl-carousel">
+                        {{#each images}}
+                        <div class="item">
+                            <img  class="lazyOwl" data-src="{{src}}" alt="{{label}}">
+                            <div class="gallery-desc">
+                                <div class="desc-copy">{{label}}</div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div> --}}
+                    <div class="gallery-carousel">
+                        {{#each images}}
+                        <div class="item">
+                            <img src="{{src}}" alt="{{label}}">
+                            <div class="gallery-desc">
+                                <div class="desc-copy">{{label}}</div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+ </div> 
+</section>
