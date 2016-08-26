@@ -1,0 +1,28 @@
+{
+	"navLinks":[
+		{
+			"copy":"Home",
+			"href":"#home"
+		},
+		{
+			"copy":"About",
+			"href":"#about"
+		},	
+		{
+			"copy":"Lifestyle",
+			"href":"#lifestyle"
+		},
+		{
+			"copy":"Gallery",
+			"href":"#gallery"
+		},
+		{
+			"copy":"Weather",
+			"href":"#weather"
+		},
+		{
+			"copy":"Map",
+			"href":"#map"
+		}
+	]
+}

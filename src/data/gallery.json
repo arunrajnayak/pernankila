@@ -1,0 +1,86 @@
+{
+	"gallery":{
+		"images":[
+			{
+				"src":"media/gallery/image1.jpg",
+				"label":"Anganavadi"
+			},
+			{
+				"src":"media/gallery/image2.jpg",
+				"label":"Cashew Factory"
+			},
+			{
+				"src":"media/gallery/image3.jpg",
+				"label":"Utsava"
+			},
+			{
+				"src":"media/gallery/image4.jpg",
+				"label":"Utsava"
+			},
+			{
+				"src":"media/gallery/image5.jpg",
+				"label":"Utsava"
+			},
+			{
+				"src":"media/gallery/image6.jpg",
+				"label":"Ganapati Temple"
+			},
+			{
+				"src":"media/gallery/image7.jpg",
+				"label":"Ganapati Temple"
+			},
+			{
+				"src":"media/gallery/image8.jpg",
+				"label":"Temple Backside"
+			},
+			{
+				"src":"media/gallery/image9.jpg",
+				"label":"Temple Frontside"
+			},
+			{
+				"src":"media/gallery/image10.jpg",
+				"label":"During Utsava"
+			},
+			{
+				"src":"media/gallery/image11.jpg",
+				"label":"Post Office"
+			},
+			{
+				"src":"media/gallery/image12.jpg",
+				"label":"Temple Pond"
+			},
+			{
+				"src":"media/gallery/image13.jpg",
+				"label":"Chariot on Utsava"
+			},
+			{
+				"src":"media/gallery/image14.jpg",
+				"label":"During Utsava"
+			},
+			{
+				"src":"media/gallery/image15.jpg",
+				"label":"Nandi"
+			},
+			{
+				"src":"media/gallery/image16.jpg",
+				"label":"Utsava"
+			},
+			{
+				"src":"media/gallery/image17.jpg",
+				"label":"Utsava"
+			},
+			{
+				"src":"media/gallery/image18.jpg",
+				"label":"Utsava"
+			},
+			{
+				"src":"media/gallery/image19.jpg",
+				"label":"Utsava"
+			},
+			{
+				"src":"media/gallery/image20.jpg",
+				"label":"Utsava"
+			}
+		]
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"hero":{
+		"items":[
+			{
+				"src":"media/slider/image1.jpg"
+			},
+			{
+				"src":"media/slider/image2.jpg"
+			},
+			{
+				"src":"media/slider/image3.jpg"
+			},
+			{
+				"src":"media/slider/image4.jpg"
+			},
+			{
+				"src":"media/slider/image5.jpg"
+			}
+		]
+	}
+}
