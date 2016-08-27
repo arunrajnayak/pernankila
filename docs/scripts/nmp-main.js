@@ -1,4 +1,4 @@
-/*! 2016-08-26 */jQuery(function($) {'use strict';
+/*! 2016-08-27 */jQuery(function($) {'use strict';
 
     // Navigation Scroll
     $(window).scroll(function(event) {
