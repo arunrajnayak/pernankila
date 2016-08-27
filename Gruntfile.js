@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 
         config: {
             src: 'src',
-            dist: 'dist',
+            dist: 'docs',
             tmp: 'tmp',
             bower: 'bower_components'
         },
